@@ -1,4 +1,5 @@
-# DTA-SLO: Dynamic Traffic-Aware SLO Allocation Framework
+# DTA-SLO: Towards Efficient Multi-Chain Resource Management: A Dynamic Traffic-Aware Framework for SLO-Driven Microservice Optimization
+
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
