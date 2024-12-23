@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  dta-slo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dta-slo
+    volumes:
+      - .:/app
+      - ~/.kube:/home/appuser/.kube:ro  
+    environment:
+      - KUBERNETES_SERVICE_HOST=${KUBERNETES_SERVICE_HOST:-""}
+      - KUBERNETES_SERVICE_PORT=${KUBERNETES_SERVICE_PORT:-""}
+    ports:
+      - "8000:8000" 
+    restart: unless-stopped
