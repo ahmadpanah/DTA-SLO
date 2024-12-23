@@ -3,7 +3,8 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Code Style](https://img.shields.io/badge/code%20style-black-black)](https://github.com/psf/black)
+[![Last Updated](https://img.shields.io/badge/last%20updated-December%202024-lightgrey)](https://github.com/ahmadpanah/DTA-SLO)
+[![Docker Support](https://img.shields.io/badge/docker-supported-blue)](https://www.docker.com/)
 
 A robust framework for optimizing resource management in complex microservice deployments with shared services and multi-chain dependencies. DTA-SLO leverages real-time traffic monitoring, time-series prediction using GRU (Gated Recurrent Unit), and novel optimization approaches to dynamically allocate resources based on individual service chain SLOs.
 
@@ -23,6 +24,7 @@ A robust framework for optimizing resource management in complex microservice de
 
 - Python 3.8+
 - Kubernetes cluster (for deployment)
+- Docker (optional)
 - kubectl configured with cluster access
 
 ### Installation
@@ -43,6 +45,15 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```bash
 pip install -r requirements.txt
 ```
+
+### 🐳 Docker Deployment
+
+# Using Docker Compose
+docker-compose up --build
+
+# Or using Docker directly
+docker build -t dta-slo .
+docker run -d --name dta-slo -v ~/.kube:/home/appuser/.kube:ro -p 8000:8000 dta-slo
 
 ### Basic Usage
 
