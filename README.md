@@ -48,12 +48,17 @@ pip install -r requirements.txt
 
 ### 🐳 Docker Deployment
 
-# Using Docker Compose
+### Using Docker Compose
+```bash
 docker-compose up --build
+```
 
-# Or using Docker directly
+### Or using Docker directly
+
+```bash
 docker build -t dta-slo .
 docker run -d --name dta-slo -v ~/.kube:/home/appuser/.kube:ro -p 8000:8000 dta-slo
+```
 
 ### Basic Usage
 
